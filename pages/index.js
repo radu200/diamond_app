@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "../styles/main.module.scss";
 import Footer from "../components/footer";
 import Head from "../components/head";
@@ -9,11 +8,11 @@ export default function Home() {
       <Head />
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="#">Everledger</a>
+          Welcome to <span>Everledger</span>
         </h1>
-        <Link href="/upload">
-          <a className={styles.upload_link}>Upload Images</a>
-        </Link>
+        <a href="/upload" className={styles.upload_link}>
+          Upload Images
+        </a>
       </main>
 
       <Footer />
