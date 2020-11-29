@@ -1,0 +1,28 @@
+@import "./variables";
+
+.inputfile {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  margin-top: 20px;
+  min-width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-radius: $border_radius;
+  font-weight: 700;
+  color: $text_color_primary;
+  background-color: $bg_color_buttons;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  opacity: 0.6;
+}

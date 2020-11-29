@@ -1,0 +1,19 @@
+@import "./variables";
+
+@mixin alert {
+  min-width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: $border_radius;
+  text-align: center;
+}
+.success {
+  @include alert;
+  background-color: $alert_color_success;
+  color: $alert_color;
+}
+.error {
+  @include alert;
+  background-color: $alert_color_error;
+  color: $alert_color;
+}
