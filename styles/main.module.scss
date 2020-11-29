@@ -19,7 +19,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: $main_title_color;
   text-decoration: none;
 }
 
@@ -50,7 +50,6 @@
 }
 .upload_link:hover {
   text-decoration: underline;
-  background-color: #fafafab0;
   padding: 10px;
 }
 

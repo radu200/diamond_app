@@ -21,8 +21,3 @@
   display: inline-block;
   cursor: pointer;
 }
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-  opacity: 0.6;
-}
