@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
 import styles from "../styles/main.module.scss";
 import Footer from "../components/footer";
 import Head from "../components/head";
@@ -31,8 +30,8 @@ export default function Upload() {
 
       const res = await instance_api.post(url, formData, {
         headers: {
-          "Content-Type": "multipart/form-data",
-        },
+          "Content-Type": "multipart/form-data"
+        }
       });
 
       if (res.status === 200) {
@@ -72,16 +71,15 @@ export default function Upload() {
         {error ? <Alert severity="error" msg="Error occurred" /> : null}
         {success ? <Alert severity="success" msg="Success" /> : null}
         {imageUrls.map((d) => (
-          <div key={d.id}>
-            <Link href={d.url}>
-              <a
-                className={styles.upload_link}
-                target="_blank"
-                rel="noopener noreferrer">
-                Image link: {d.name}
-              </a>
-            </Link>
-          </div>
+          <a
+            key={d.id}
+            href={d.url}
+            className={styles.upload_link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Image link: {d.name}
+          </a>
         ))}
       </main>
       <Footer />
