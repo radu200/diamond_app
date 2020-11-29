@@ -55,17 +55,11 @@ export default function Upload() {
       <main className={styles.main}>
         <img
           src="/El_logo_colour_12.09.png"
-          alt="Vercel Logo"
+          alt="Logo"
           className={styles.logo_v2}
         />
         {currentImage ? (
-          <img
-            className={styles.preview_img}
-            src={currentImage}
-            alt=""
-            width={200}
-            height={200}
-          />
+          <img className={styles.preview_img} src={currentImage} alt="" />
         ) : null}
         {loading ? <Spinner /> : <UploadButton onChange={onChangeFile} />}
         {error ? <Alert severity="error" msg="Error occurred" /> : null}
